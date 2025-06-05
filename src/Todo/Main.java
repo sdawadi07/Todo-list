@@ -57,18 +57,58 @@ public class Main {
 
                     String doneinput = scanner.nextLine();
                     int doneId;
+                  try {
+                      doneId = Integer.parseInt(doneinput);
+                  } catch(NumberFormatException e){
+                      System.out.println("Invalid number format:");
+                      break;
+                  }
+                  boolean wasMarked = todo.markDone(doneId);
+                  if (wasMarked){
+                      System.out.println("Task" + doneId + "marked done.");
+                  }
+                  else{
+                      System.out.println("Task" + doneId + "not marked done");
+
+                  }
+
 
 
 
                break;
 
                 case "4":
+                    //Delete a task
+                    System.out.println("Enter a task id you need to delete:");
+                    String deleteinput = scanner.nextLine();
+                    int deleteId;
+                    try {
+                        deleteId = Integer.parseInt(deleteinput);
+                    } catch(NumberFormatException e){
+                        System.out.println("Invalid number format:");
+                        break;
+                    }
+                    boolean wasDeleted = todo.deleteTask(deleteId);
+                    if (wasDeleted){
+                        System.out.println("Task" + deleteId + "was deleted.");
+                    }
+                    else{
+                        System.out.println("Task" + deleteId + "was not deleted.");
+
+                    }
+
                     break;
 
                 case"0":
+                    // exit from the Todo-List app
+                    System.out.println("Thank you! Have a Good day");
+                    scanner.close();
                    return;
 
                 default:
+                    //If none of the above cases are used
+
+                    System.out.println(" Invalid input. Please try again");
 
                     break;
             }
