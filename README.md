@@ -6,3 +6,7 @@ I have a package name Todo and java classes
 Task
 TodoList
 Main
+This project has two versions. One is console and the other oen is GUI version.
+
+## Console
+This is basic text based interface.In this console version.
