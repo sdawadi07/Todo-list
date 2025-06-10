@@ -5,7 +5,7 @@ public class Task {
     private boolean done;
      private String title;
 
-    public Task(String title) {
+    public Task(int nextId, String title) {
         this.title = title;
     }
 
