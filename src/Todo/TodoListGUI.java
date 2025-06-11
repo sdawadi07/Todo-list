@@ -43,7 +43,7 @@ public class TodoListGUI extends Application {
             String title = inputField.getTooltip().getText();
             if (!title.isEmpty()){
                 Task t = todoList.addTask(title);
-                refreshList;
+                refreshList();
                 inputField.clear();
 
 
@@ -58,5 +58,23 @@ public class TodoListGUI extends Application {
                refreshList();
            }
        });
+       deleteButton.setOnAction(event -> {
+           int selectedIndex = listView.getSelectionModel().getSelectedIndex();
+           if (selectedIndex != -1) {
+               int id = todoList.getTasks().get(selectedIndex).getId();
+               todoList.deleteTask(id);
+               refreshList();
+           }
+       });
+       Scene scene = new Scene(vbox,500,400);
+       primaryStage.setScene(scene);
+       primaryStage.show();
+    }
+    private void refreshList(){
+        listView.getItems().clear();
+        for(Task t: todoList.getTasks()){
+            String status = t.isDone() ? "[Done]":"[]";
+            listView.getItems().add(status + t.getTitle());
+        }
     }
 }
