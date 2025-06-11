@@ -50,6 +50,13 @@ public class TodoListGUI extends Application {
             }
 
         } );
-
+       addMarkDone.setOnAction(event -> {
+           int selectedIndex = listView.getSelectionModel().getSelectedIndex();
+           if (selectedIndex != -1) {
+               int id = todoList.getTasks().get(selectedIndex).getId();
+               todoList.markDone(id);
+               refreshList();
+           }
+       });
     }
 }
