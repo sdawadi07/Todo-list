@@ -10,7 +10,7 @@ public class TodoListGUI extends Application {
 
     private TodoList todoList = new TodoList();
     private ListView<String> listView = new ListView<>();
-    private ComboBoxBase<Object> inputField;
+     private TextField inputField = new TextField();
 
     public static void main(String[] args) {
         launch(args);  // Start JavaFX app
@@ -39,7 +39,7 @@ public class TodoListGUI extends Application {
 
 
         addButton.setOnAction(event ->{
-
+            inputField.setTooltip(new Tooltip("Enter your task here"));
             String title = inputField.getTooltip().getText();
             if (!title.isEmpty()){
                 Task t = todoList.addTask(title);
