@@ -10,6 +10,7 @@ public class TodoListGUI extends Application {
 
     private TodoList todoList = new TodoList();
     private ListView<String> listView = new ListView<>();
+
      private TextField inputField = new TextField();
 
     public static void main(String[] args) {
