@@ -1,4 +1,4 @@
-@Author-Swastika Dawadi
+@Author-SWASTIKA DAWADI
 
 In this project, I am making Todo-list app. For now this is only console version. I can later change it to GUI
 version as well.The project demonstrates basic Java OOP concepts and GUI programming with JavaFX.
