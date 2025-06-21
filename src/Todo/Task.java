@@ -2,6 +2,7 @@ package Todo;
 
 public class Task {
     private int id;
+
     private boolean done;
      private String title;
 
