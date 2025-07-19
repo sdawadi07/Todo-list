@@ -13,7 +13,6 @@ public class TodoList {
         nextId =1;
 
     }
-
     /**
      *
      * @param title
