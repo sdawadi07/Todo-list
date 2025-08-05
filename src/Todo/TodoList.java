@@ -12,9 +12,6 @@ public class TodoList {
         tasks = new ArrayList<>();
         nextId =1;
 
-
-
-
     }
     /**
      *
