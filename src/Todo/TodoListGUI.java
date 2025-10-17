@@ -6,6 +6,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
+
 public class TodoListGUI extends Application {
 
     private TodoList todoList = new TodoList();
