@@ -104,7 +104,8 @@ public class Main {
                     scanner.close();
                    return;
 
-                default:
+
+                   default:
                     //If none of the above cases are used
 
                     System.out.println(" Invalid input. Please try again");
